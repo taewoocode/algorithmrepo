@@ -13,11 +13,40 @@ public class TriangleLB {
             n = scanner.nextInt();
         } while (n <= 0); //n이 0보다 작으면 반복문을 반복한다.
 
+        /*for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print( '*' );
+            }
+            System.out.println();
+        }*/
+
+        triangleUB( 5 );
+
+
+
+
+    }
+
+    //왼쪽 아래가 직각인 삼각형 출력
+    static void triangleLB(int n) {
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= i; j++) {
+                System.out.println( '*' );
+            }
+            System.out.println();
+        }
+    }
+
+    //왼쪽 위가 직각인 삼각형 출력
+    static void triangleUB(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i + 1; j++) {
                 System.out.print( '*' );
             }
             System.out.println();
         }
     }
+
+
+
 }
