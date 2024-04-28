@@ -16,15 +16,21 @@ public class Main2 {
 
     public String solution(String str) {
         String answer = " "; //가장 긴 단어를 answer에 저장한다.
-        int max = Integer.MIN_VALUE; //가장 작은 값으로 우선 초기화를 해준다.
-        String[] s = str.split( " ");
-        for(String x : s){
-            int len = x.length();
-            if (len > max) { //기존 길이보다 더 긴 것이 발견되면
-                max = len; //길이는 더 긴 것으로 바꿔주고
-                answer = x; //단어는 교체된다.
+        int max = Integer.MIN_VALUE, pos; //가장 작은 값으로 우선 초기화를 해준다.
+        while ((pos = str.indexOf( ' ' )) != -1) {
+            String tmp = str.substring( 0, pos ); //it
+            int len = tmp.length();
+            if(len>max){
+                max = len;
+                answer = tmp;
             }
+            str = str.substring( pos + 1 );
         }
+
+
+
+
+
         return answer;
     }
 
