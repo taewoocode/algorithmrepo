@@ -24,6 +24,7 @@ public class Main2 {
                 max = len;
                 answer = tmp;
             }
+            if (str.length() > max) answer = str;
             str = str.substring( pos + 1 );
         }
 
