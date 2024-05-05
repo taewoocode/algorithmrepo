@@ -1,4 +1,4 @@
-package basic;
+package basic.day0505;
 
 
 //대문자는 소문자로 소문자는 대문자로

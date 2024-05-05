@@ -1,4 +1,4 @@
-package basic;
+package basic.day0505;
 
 public class GCD {
     public static void main(String[] args) {
